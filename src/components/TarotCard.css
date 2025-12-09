@@ -1,0 +1,75 @@
+.tarot-card-container {
+  width: 300px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.tarot-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.tarot-card-container.revealed .tarot-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tarot-card-front,
+.tarot-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarot-card-front {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 2px solid #c9a55c;
+}
+
+.card-pattern {
+  width: 90%;
+  height: 90%;
+  border: 1px solid rgba(201, 165, 92, 0.3);
+  background-image: radial-gradient(#c9a55c 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+.tarot-card-back {
+  background-color: #f0f0f0;
+  color: #333;
+  transform: rotateY(180deg);
+  border: 5px solid #fff;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  border-bottom: 2px solid #c9a55c;
+}
+
+.card-name {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}

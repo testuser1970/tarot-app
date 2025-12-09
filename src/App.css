@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #c9a55c;
+  --bg-color: #0f0f1a;
+  --text-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.app-footer a {
+  color: #888;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.app-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(201, 165, 92, 0.5);
+  letter-spacing: 5px;
+}
+
+.app-header p {
+  color: #888;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.card-area {
+  margin-bottom: 30px;
+  height: 520px;
+  /* Reserve space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+.reset-button {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.reset-button:hover {
+  background: rgba(201, 165, 92, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
