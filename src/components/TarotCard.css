@@ -49,17 +49,18 @@
 }
 
 .tarot-card-back {
-  background-color: #f0f0f0;
+  background-color: #0f0f1a;
   color: #333;
   transform: rotateY(180deg);
-  border: 5px solid #fff;
+  border: 2px solid #c9a55c;
   overflow: hidden;
 }
 
 .card-image {
   width: 100%;
   height: 85%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #000;
   border-bottom: 2px solid #c9a55c;
 }
 
