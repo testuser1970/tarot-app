@@ -11,7 +11,7 @@ export const ShareButton: React.FC<ShareButtonProps> = ({ card }) => {
         // Use the dedicated share proxy to ensure correct OGP meta tags are served.
         const url = `${window.location.origin}/api/share?id=${card.id}`;
 
-        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+        const twitterUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
 
         window.open(twitterUrl, '_blank', 'width=550,height=420');
     };
