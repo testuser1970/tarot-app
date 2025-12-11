@@ -83,6 +83,10 @@ function App() {
 
       <footer className="app-footer">
         <p>引用元: <a href="https://amateras.blog/public-domain-waite-major/" target="_blank" rel="noopener noreferrer">amateras.blog</a></p>
+        <div className="developer-info">
+          <span>Developer: </span>
+          <a href="https://x.com/Tsubaki_Yutaka" target="_blank" rel="noopener noreferrer">@Tsubaki_Yutaka</a>
+        </div>
       </footer>
     </div>
   );
