@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TarotCard as TarotCardComponent } from './components/TarotCard';
 import { DrawButton } from './components/DrawButton';
 import { ResultView } from './components/ResultView';
 import { LimitMessage } from './components/LimitMessage';
 import { useDailyLimit } from './hooks/useDailyLimit';
-import { getRandomCard, type TarotCard as TarotCardType } from './data/tarotData';
+import { getRandomCard, tarotData, type TarotCard as TarotCardType } from './data/tarotData';
 import './App.css';
 
 function App() {
@@ -13,6 +13,21 @@ function App() {
   const [isRevealed, setIsRevealed] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [isDrawing, setIsDrawing] = useState(false);
+
+  useEffect(() => {
+    // Check for result parameter in URL
+    const searchParams = new URLSearchParams(window.location.search);
+    const resultId = searchParams.get('result');
+
+    if (resultId !== null) {
+      const card = tarotData.find(c => c.id === Number(resultId));
+      if (card) {
+        setCurrentCard(card);
+        setIsRevealed(true);
+        setShowResult(true);
+      }
+    }
+  }, []);
 
   const handleDraw = () => {
     if (isLimitReached || remaining <= 0 || isDrawing) return;
